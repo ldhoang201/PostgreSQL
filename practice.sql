@@ -1,0 +1,3 @@
+CREATE TABLE public."student" ("student_id" character(6) NOT NULL,"first_name" character varying(40),"last_name" character varying(10),"dob" date,"gender" character varying(10),"address" character varying(40),"note" character varying(40),"clazz_id" character(8) NOT NULL,CONSTRAINT pk_student PRIMARY KEY("student_id"),CONSTRAINT fk_student_clazz FOREIGN KEY ("clazz_id") REFERENCES public."clazz"("clazz_id"));
+
+CREATE TABLE public."clazz" ("clazz_id" character(8) NOT NULL,"name" character varying(40),"monitor_id" character(6) NOT NULL,CONSTRAINT pk_clazz PRIMARY KEY("clazz_id"));
